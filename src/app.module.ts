@@ -6,6 +6,11 @@ import configurationApp from 'config/configuration-app';
 
 @Module({
   imports: [
+    /*
+      envFilePath -> ruta del fichero .env
+      load -> ficheros de configuracion
+      isGlobal -> Puedes importar el servicio ConfigService en cualquier parte
+    */
     ConfigModule.forRoot({
       envFilePath: `./env/${process.env.NODE_ENV}.env`,
       load: [configurationApp],
